@@ -1,32 +1,35 @@
 # General Brew packages to install, they can be added by searching with `brew search APP_NAME` 
+
 - name: Install and upgrade Homebrew packages
   homebrew:
     state: present
-    name: "{{ item }}"
+    name: "{{ packages }}"
     update_homebrew  : yes
     upgrade_all: yes
-  with_items:
-    - byobu
-    - git
-    - htmldoc
-    - htop
-    - inetutils
-    - lynx
-    - markdown
-    - mas # Needed by Mac App Store step!
-    - nmap
-    - node
-    - openssl
-    - pidof
-    - pipenv
-    - python
-    - ripgrep
-    - ruby
-    - smartmontools
-    - telnet
-    - watch
-    - watchman
-    - wget
-    - yarn
-    - zsh
-    - zsh-completions
+    install_options: enable-debug
+  vars: 
+    packages:
+      - byobu
+      - git
+      - htmldoc
+      - htop
+      - inetutils
+      - lynx
+      - markdown
+      - mas # Needed by Mac App Store step!
+      - nmap
+      - node
+      - openssl
+      - pidof
+      - pipenv
+      - python
+      - ripgrep
+      - ruby
+      - smartmontools
+      - telnet
+      - watch
+      - watchman
+      - wget
+      - yarn
+      - zsh
+      - zsh-completions
