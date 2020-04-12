@@ -6,7 +6,6 @@
     name: "{{ packages }}"
     update_homebrew: yes
     upgrade_all: yes
-    install_options: enable-debug
   vars: 
     packages:
       - byobu
