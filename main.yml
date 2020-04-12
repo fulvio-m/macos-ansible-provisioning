@@ -1,0 +1,13 @@
+- hosts: localhost
+  connection: local
+
+  # Here are the main tasks for Ansible, they can be commented out individually
+  tasks: 
+    - import_tasks: app-store.yml
+    - import_tasks: homebrew.yml
+    - import_tasks: homebrew-cask.yml
+
+    # Leave this one enabled, it's just a cleanup for brew
+    - name: Cleanup brew
+      command: brew cleanup -s    
+          

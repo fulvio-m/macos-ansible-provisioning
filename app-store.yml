@@ -1,0 +1,15 @@
+# Mac App Store apps to install by their App Store ID
+# The app ID can be obtained by running `mas search APP_NAME`
+- name: Install Mac App Store apps
+  command: mas install "{{ item }}"
+  with_items:
+    - 497799835 # Xcode
+    - 409201541 # Pages
+    - 568494494 # Pocket
+    - 1086818840 # Rocket.Chat
+    - 453164367 # SystemPal
+    - 1384080005 # Tweetbot
+    - 747648890 # Telegram
+    - 926036361 # LastPass
+    - 409183694 # Keynote
+    - 409203825 # Numbers

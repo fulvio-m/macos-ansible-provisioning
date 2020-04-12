@@ -1,0 +1,22 @@
+# Brew cask apps to install, basically all GUI apps, they can be added by searching with `brew search APP_NAME` 
+- name: tap fonts cask
+  command: brew tap caskroom/fonts
+
+- name: Install and upgrade Homebrew casks
+  homebrew_cask:
+    state: present
+    name: "{{ item }}"
+  with_items:
+    - anydesk
+    - firefox
+    - font-hack-nerd-font
+    - font-source-code-pro-for-powerlineù
+    - homebrew/cask-fonts/font-roboto-mono-for-powerline
+    - google-chrome
+    - iterm2
+    - microsoft-office
+    - powershell
+    - sublime-text
+    - tunnelblick
+    - visual-studio-code
+    - vlc
